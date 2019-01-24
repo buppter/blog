@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Buppter</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://buppter.xyz/"/>
+  <updated>2019-01-24T09:05:47.000Z</updated>
+  <id>https://buppter.xyz/</id>
+  
+  <author>
+    <name>buppter</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="https://buppter.xyz/2019/01/13/hello-world/"/>
+    <id>https://buppter.xyz/2019/01/13/hello-world/</id>
+    <published>2019-01-13T12:46:25.000Z</published>
+    <updated>2019-01-24T09:05:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Thu Jan 24 2019 22:55:59 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Hello" scheme="https://buppter.xyz/categories/Hello/"/>
+    
+    
+      <category term="hello" scheme="https://buppter.xyz/tags/hello/"/>
+    
+      <category term="test" scheme="https://buppter.xyz/tags/test/"/>
+    
+  </entry>
+  
+</feed>
