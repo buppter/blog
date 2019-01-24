@@ -1,4 +1,4 @@
 .DS_Store
 Thumbs.db
-db.json
-*.log
+*.lognode_modules/
+.deploy*/
