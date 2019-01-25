@@ -112,7 +112,7 @@ author = db.relationship('User', backref='articles', foreign_keys="author_id")
 ```
 
 
-接着给`Article`表添加一条记录，指定`Author`为`张三(users.id=1)`，`Reviewer`为`李四(usersid)`   
+接着给`Article`表添加一条记录，指定`Author`为`张三(users.id=1)`，`Reviewer`为`李四(users.id=2)`   
 
 
 ```
