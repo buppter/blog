@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://buppter.xyz/"/>
-  <updated>2019-01-24T09:05:47.000Z</updated>
+  <updated>2019-01-25T06:22:11.400Z</updated>
   <id>https://buppter.xyz/</id>
   
   <author>
@@ -17,24 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World!</title>
-    <link href="https://buppter.xyz/2019/01/13/hello-world/"/>
-    <id>https://buppter.xyz/2019/01/13/hello-world/</id>
-    <published>2019-01-13T12:46:25.000Z</published>
-    <updated>2019-01-24T09:05:47.000Z</updated>
+    <title>SQLAchemy中处理两张表之间存在多个外键的情况</title>
+    <link href="https://buppter.xyz/2019/01/24/SQLAchemy%E4%B8%AD%E5%A4%84%E7%90%86%E4%B8%A4%E5%BC%A0%E8%A1%A8%E4%B9%8B%E9%97%B4%E5%AD%98%E5%9C%A8%E5%A4%9A%E4%B8%AA%E5%A4%96%E9%94%AE%E7%9A%84%E6%83%85%E5%86%B5/"/>
+    <id>https://buppter.xyz/2019/01/24/SQLAchemy中处理两张表之间存在多个外键的情况/</id>
+    <published>2019-01-24T15:51:17.000Z</published>
+    <updated>2019-01-25T06:22:11.400Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Jan 24 2019 22:55:59 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
+      &lt;!-- build time:Fri Jan 25 2019 14:49:36 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;在Flask的开发中，我们势必会遇到两张表之间存在多个外键的情况。例如，现在有两张表，一张表是&lt;code&gt;User&lt;/code&gt;，另一张表是&lt;code&gt;Article&lt;/code&gt;。一篇文章的作者&lt;code&gt;author_id&lt;/code&gt;可以设置外键关联&lt;code&gt;User&lt;/code&gt;表，同时文章的审稿人&lt;code&gt;reviewer_id&lt;/code&gt;也可以设置外键关联&lt;code&gt;User&lt;/code&gt;表。当我们以SQLAchemy多对一(many to one)的设计方法来添加&lt;code&gt;relationship&lt;/code&gt;关系映射时，程序会抛出一个&lt;code&gt;AmbiguousForeignKeysError&lt;/code&gt;错误，这篇文章我们就来解决这个问题。&lt;br&gt;
     
     </summary>
     
-      <category term="Hello" scheme="https://buppter.xyz/categories/Hello/"/>
+      <category term="Flask" scheme="https://buppter.xyz/categories/Flask/"/>
     
     
-      <category term="hello" scheme="https://buppter.xyz/tags/hello/"/>
+      <category term="Flask" scheme="https://buppter.xyz/tags/Flask/"/>
     
-      <category term="test" scheme="https://buppter.xyz/tags/test/"/>
+      <category term="Flask-SQLAchemy" scheme="https://buppter.xyz/tags/Flask-SQLAchemy/"/>
+    
+      <category term="SQLAchemy" scheme="https://buppter.xyz/tags/SQLAchemy/"/>
     
   </entry>
   

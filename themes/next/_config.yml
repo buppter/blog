@@ -502,8 +502,8 @@ changyan:
 # more info please open https://valine.js.org
 valine:
   enable: true
-  appid:  #****
-  appkey:  #****
+  appid:  828MBop9tyAySQlGwzCHuBvV-gzGzoHsz
+  appkey:  zck5eQcQuGA1OPkFppck6cUk
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: Just go go # comment box placeholder
@@ -648,7 +648,7 @@ leancloud_visitors:
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in lc counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set the `security` to `false`.
-  security: true
+  security: false
   betterPerformance: true
 
 # Another tool to show number of visitors to each article.
@@ -901,7 +901,7 @@ vendors:
 
   # Internal version: 4.6.2
   # See: http://fontawesome.io/
-  fontawesome:
+  fontawesome: https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css
 
   # Internal version: 1
   # https://www.algolia.com
@@ -955,7 +955,7 @@ vendors:
   # bookmark
   # Internal version: 1.0.0
   # https://github.com/theme-next/theme-next-bookmark
-  bookmark:
+  bookmark: https://cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@latest/bookmark.min.js
 
   # reading_progress
   # Internal version: 1.0
