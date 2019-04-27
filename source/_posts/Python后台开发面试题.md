@@ -59,7 +59,7 @@ tags:
     `标记-清除`：分为两个阶段，第一阶段是标记阶段，把所有的活动对象打上标记；第二阶段把没有被标记的对象进行回收。      从根对象（root object）出发，沿着有向边遍历对象，可达的（reachable）对象标记为活动对象，不可达的对象就是要被清除的非活动对象。在下图中，我们把小黑圈视为全局变量，也就是把它作为root object，从小黑圈出发，对象1可直达，那么它将被标记，对象2、3可间接到达也会被标记， 而4和5不可达，那么1、2、3就是活动对象，4和5是非活动对象会被GC回收。  
     缺点就是清除非活动对象前必须扫描整个堆内存。  
 
-    ![标记清除原理](https://ws1.sinaimg.cn/large/0072atzFly1g1eviz36vxj309q078weh.jpg)   
+    ![标记清除原理](https://s2.ax1x.com/2019/04/27/EKfaCR.jpg)   
 
     `分代回收`：Python将内存根据生存时间划分为不同的集合，每个集合称为一个代。一共有三代，分别为年轻代（第0代），中年代（第1代），老年代（第2代）， 新创建的对象都被分在第0代，当第0代链表数达到上限，Python的垃圾回收机制就会被触发，把那些可以被回收的对象回收掉，不会被回收的就被移到第1代，以此类推。第2代中的对象就是存活时间最长的对象。  
 
@@ -136,44 +136,60 @@ tags:
         print(t.send("e"))
     StopIteration
 
-    ```
+   ```
 
 
     **注意**：需要注意的一点是在使用`yield from`的时候会自动预激
 4. ##### Python的多线程、多进程、协程
-16. ##### Python的作用域
+
+5. ##### Python的作用域
+
 3. ##### yield 和 yield from 
     [具体讲解](https://www.cnblogs.com/wongbingming/p/9085268.html)
+    
 1. ##### Python中的锁    
     [具体讲解](https://www.cnblogs.com/wongbingming/p/9035575.html)
-2. ##### Python的闭包，装饰器 
-3. ##### \__init\__ 和 \__new__
-4. ##### \*args`和 \**kwages
+    
+8. ##### Python的闭包，装饰器 
+
+9. ##### \__init\__ 和 \__new__
+
+10. ##### \*args`和 \**kwages
+
 1. ##### 数据库中的锁  
     乐观锁和悲观锁
+    
 2. ##### 数据库中的join  
 
-    ![](https://ws1.sinaimg.cn/mw690/0072atzFly1g1h36cps1kj30qu0l4wi8.jpg)  
+    ![](https://s2.ax1x.com/2019/04/27/EKfW8I.md.jpg)  
 
     [具体讲解](https://blog.csdn.net/liitdar/article/details/80817087)
+    
 3. ##### MySQL的存储引擎  
     InnoDB和MyISAM
+    
 4. ##### 数据库的事务  
     [具体讲解](https://www.cnblogs.com/xrq730/p/5087378.html)
+    
 5. ##### 数据库的索引 
     分为单行索引和组合索引。其中单行索引又分为普通索引、主键索引（不允许为空，唯一）和 唯一索引（可以为空，但唯一）  
     [具体讲解](https://www.cnblogs.com/wuchanming/p/6886020.html)
-6. ##### Redis的数据持久化（AOF和RDB)
+    
+16. ##### Redis的数据持久化（AOF和RDB)
+
 7. ##### HTTP 1.0、HTTP 1.1和HTTP 2.0的区别
     [具体讲解](https://www.cnblogs.com/heluan/p/8620312.html)
+    
 8. ##### WebSocket  
     WebSocket 是 HTML5 开始提供的一种在单个 TCP 连接上进行全双工通讯的协议。  
     WebSocket 使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。在 WebSocket API 中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。
+    
 9.  ##### HTTP的请求报文和响应报文  
     
-    ![请求报文](https://ws1.sinaimg.cn/large/0072atzFly1g1f0tit56rj30cy04lt8p.jpg)
+    ![请求报文](https://s2.ax1x.com/2019/04/27/EKfb5j.jpg)
 
-    ![响应报文](https://ws1.sinaimg.cn/mw690/0072atzFly1g1f0wiurchj30gg06fjrs.jpg)
+    ![响应报文](https://s2.ax1x.com/2019/04/27/EKfzrT.jpg)
+    
 10. ##### 一次完整的HTTP请求过程  
     1. 域名解析  
         1. 首先搜索浏览器自身的DNS缓存
@@ -198,12 +214,16 @@ tags:
     4. 服务器响应HTTP请求，同时浏览器得到HTML代码
     5. 浏览器解析HTML代码，并请求HTML代码中的资源
     6. 浏览器将页面渲染给用户
+    
 11. ##### GET和POST的区别  
     GET是将请求的数据和header一并发送给服务器，只发送一次TCP包  
     POST是先发送header给服务器，然后服务器返回100，再将数据发送给服务器，发送了两次TCP包 
-12. ##### TCP三次握手和四次挥手  
+    
+22. ##### TCP三次握手和四次挥手  
+
 13. ##### TIME_WAIT的原因  
     发生在主动请求关闭的一方
+    
 14. ##### TCP和UDP的区别 
     1. TCP面向连接，UDP无连接 
     2. TCP提供可靠服务，UDP不保证可靠交付
@@ -211,10 +231,12 @@ tags:
     4. TCP只支持点到点通信，UDP支持一对一，一对多，多对一和多对多通信
     5. TCP对系统资源要求较多，UDP对系统资源要求较少
     6. TCP数据容易发生粘包
+    
 15. ##### TCP的粘包  
     1. 发送方引起的粘包是由TCP协议本身造成的，TCP为提高传输效率，发送方往往要收集到足够多的数据后才发送一包数据。若连续几次发送的数据都很少，通常TCP会根据优化算法把这些数据合成一包后一次发送出去，这样接收方就收到了粘包数据。
     2. 接收方引起的粘包是由于接收方用户进程不及时接收数据，从而导致粘包现象。这是因为接收方先把收到的数据放在系统接收缓冲区，用户进程从该缓冲区取数据，若下一包数据到达时前一包数据尚未被用户进程取走，则下一包数据放到系统接收缓冲区时就接到前一包数据之后，而用户进程根据预先设定的缓冲区大小从系统接收缓冲区取数据，这样就一次取到了多包数据。  
     3. 解决办法就是封包、拆包。给一段数据加上包头,这样一来数据包就分为包头和包体两部分内容了(以后讲过滤非法包时封包会加入"包尾"内容)。包头其实上是个大小固定的结构体，其中有个结构体成员变量表示包体的长度，这是个很重要的变量，其他的结构体成员可根据需要自己定义。根据包头长度固定以及包头中含有包体长度的变量就能正确的拆分出一个完整的数据包。
+    
 16. ##### select、poll和epoll的区别
     select，poll，epoll本质上都是同步I/O，因为他们都需要在读写事件就绪后自己负责进行读写，也就是说这个读写过程是阻塞的。
     
@@ -227,98 +249,112 @@ tags:
     缺点：  
         1. 大量的fd的数组被整体复制于用户态和内核地址空间之间，对于系统的开销比较大  
         2. poll还有一个特点是“水平触发”，如果报告了fd后，没有被处理，那么下次poll时会再次报告该fd。
- 
+
     **注意**：从上面看，select和poll都需要在返回后，通过遍历文件描述符来获取已经就绪的socket。事实上，同时连接的大量客户端在一时刻可能只有很少的处于就绪状态，因此随着监视的描述符数量的增长，其效率也会线性下降。  
     
     相对于select和poll来说，epoll更加灵活，没有描述符限制。epoll使用一个文件描述符管理多个描述符，将用户关系的文件描述符的事件存放到内核的一个事件表中，这样在用户空间和内核空间的copy只需一次。epoll支持水平触发和边缘触发，最大的特点在于边缘触发，它只告诉进程哪些fd刚刚变为就绪态，并且只会通知一次。还有一个特点是，epoll使用“事件”的就绪通知方式，通过epoll_ctl注册fd，一旦该fd就绪，内核就会采用类似callback的回调机制来激活该fd，epoll_wait便可以收到通知。  
     优点：   
         1. 没有最大并发连接的限制  
-        2. 效率提升，不是轮询的方式，不会随着FD数目的增加效率下降  
-        3. 内存拷贝，利用mmap()文件映射内存加速与内核空间的消息传递；即epoll使用mmap减少复制开销。  
-    在select/poll中，进程只有在调用一定的方法后，内核才对所有监视的文件描述符进行扫描，而epoll事先通过epoll_ctl()来注册一个文件描述符， 一旦基于某个文件描述符就绪时，内核会采用类似callback的回调机制，迅速激活这个文件描述符，当进程调用epoll_wait()时便得到通知。 (此处去掉了遍历文件描述符，而是通过监听回调的的机制。这正是epoll的魅力所在） 
+            2. 效率提升，不是轮询的方式，不会随着FD数目的增加效率下降  
+            3. 内存拷贝，利用mmap()文件映射内存加速与内核空间的消息传递；即epoll使用mmap减少复制开销。  
+    在select/poll中，进程只有在调用一定的方法后，内核才对所有监视的文件描述符进行扫描，而epoll事先通过epoll_ctl()来注册一个文件描述符， 一旦基于某个文件描述符就绪时，内核会采用类似callback的回调机制，迅速激活这个文件描述符，当进程调用epoll_wait()时便得到通知。 (此处去掉了遍历文件描述符，而是通过监听回调的的机制。这正是epoll的魅力所在）   
 
-    ![支持一个进程所能打开的最大连接数](https://ws1.sinaimg.cn/mw690/0072atzFly1g1f250wpy4j30wi0gin0s.jpg)
+    ![支持一个进程所能打开的最大连接数](https://s2.ax1x.com/2019/04/27/EKhFi9.jpg)
     
-    ![FD剧增后带来的IO效率问题](https://ws1.sinaimg.cn/mw690/0072atzFly1g1f2t952tbj30wg0f2wid.jpg)  
+    ![FD剧增后带来的IO效率问题](https://s2.ax1x.com/2019/04/27/EKhuZD.jpg)  
         
-    ![消息传递方式](https://ws1.sinaimg.cn/mw690/0072atzFly1g1f25ziw99j30wg09emy0.jpg) 
+    ![消息传递方式](https://s2.ax1x.com/2019/04/27/EKhMIH.jpg) 
     
     综上，在选择select，poll，epoll时要根据具体的使用场合以及这三种方式的自身特点：  
     1、表面上看epoll的性能最好，但是在连接数少并且连接都十分活跃的情况下，select和poll的性能可能比epoll好，毕竟epoll的通知机制需要很多函数回调。  
     2、select低效是因为每次它都需要轮询。但低效也是相对的，视情况而定，也可通过良好的设计改善。  
+    
 17. ##### 几种排序
+    
+    ![排序](https://s2.ax1x.com/2019/04/27/EKhadg.jpg)
+    
     [具体讲解](https://www.cnblogs.com/fwl8888/p/9315730.html)
-18. ##### 链表
-19. ##### 栈，队列
-20. ##### 完全二叉树，平衡二叉树，红黑树，B树，B+树，二叉搜索树   
-    [平衡二叉树](https://blog.csdn.net/jacke121/article/details/78268602)
+    
+28. ##### 链表
 
-    [红黑树](https://www.cnblogs.com/yyxt/p/4983967.html)
-    
-    [B树，B+树](https://blog.csdn.net/z_ryan/article/details/79685072)  
-21. ##### 进程间的通信方式  
-    消息队列，信号量，管道，共享内存，Socket  
-    
-    [具体讲解](https://www.cnblogs.com/zgq0/p/8780893.html)
-22. ##### 进程程的状态
-    就绪，运行，阻塞  
+29. ##### 栈，队列
 
-    [具体讲解](https://www.cnblogs.com/zxf98/p/5716296.html)
-23. ##### Docker
-    [具体讲解](https://blog.csdn.net/wh211212/article/details/53208960)  
-    
-24. ##### 网络七层协议，五层协议，TCP/IP四层协议
-    七层：物理层，数据链路层，网络层，传输层，会话层，表示层，应用层  
-    五层：物理层，数据链路层，网络层，传输层，应用层  
-    四层：网络接口层，网络层，传输层，应用层 
-  
-    [具体讲解](https://blog.csdn.net/cc1949/article/details/79063439)
-25. ##### RESRful
-    1. 使用HTTPS  
-    2. API域名和版本号  
-    3. HTTP动词，GET、DELETE、PUT、POST
-    4. 过滤，排序，搜索，分页
-    5. 状态码和文字说明
-    6. 文档  
-    
-    [具体讲解](https://blog.csdn.net/u013007900/article/details/79875287)
-26. ##### MVVC
-    多版本并发控制  
+30. ##### 完全二叉树，平衡二叉树，红黑树，B树，B+树，二叉搜索树   
+     [平衡二叉树](https://blog.csdn.net/jacke121/article/details/78268602)
 
-    [具体讲解](https://www.cnblogs.com/hirampeng/p/9944200.html)
-27. ##### Ping用的什么协议
-    ICMP 网络控制消息协议
-28. ##### 堆排序
-    堆(heap): 父节点的值大于子节点的值的完全二叉树  
+     [红黑树](https://www.cnblogs.com/yyxt/p/4983967.html)
 
-    ![求第i个节点的父子节点](https://ws1.sinaimg.cn/mw690/0072atzFly1g1gho0p52kj31rw0tk7gi.jpg)
+     [B树，B+树](https://blog.csdn.net/z_ryan/article/details/79685072)  
 
-    ```python
-    
-    def heapify(alist, n, i):
-        if i >= n:
-            return
-        c1 = 2 * i + 1
-        c2 = 2 * i + 2
-        max_index = i
-        if c1 < n and alist[c1] > alist[max_index]:
-            max_index = c1
-        if c2 < n and alist[c2] > alist[max_index]:
-            max_index = c2
-        if max_index != i:
-            alist[i], alist[max_index] = alist[max_index], alist[i]
-            heapify(alist, n, max_index)
-    
-    def build_heap(alist, n):
-        last_node = n - 1
-        last_node_parent = n//2 -1
-        for i in range(last_node_parent, -1, -1):
-            heapify(alist, n, i)
-    
-    def heap_sort(alist, n):
-        build_heap(alist, n)
-        for i in range(n-1, -1, -1):
-            alist[i], alist[0] = alist[0], alist[i]
-            heapify(alist, i, 0)
-    ```
+31. ##### 进程间的通信方式  
+     消息队列，信号量，管道，共享内存，Socket  
+
+     [具体讲解](https://www.cnblogs.com/zgq0/p/8780893.html)
+
+32. ##### 进程程的状态
+     就绪，运行，阻塞  
+
+     [具体讲解](https://www.cnblogs.com/zxf98/p/5716296.html)
+
+33. ##### Docker
+     [具体讲解](https://blog.csdn.net/wh211212/article/details/53208960)  
+
+34. ##### 网络七层协议，五层协议，TCP/IP四层协议
+     七层：物理层，数据链路层，网络层，传输层，会话层，表示层，应用层  
+     五层：物理层，数据链路层，网络层，传输层，应用层  
+     四层：网络接口层，网络层，传输层，应用层 
+
+     [具体讲解](https://blog.csdn.net/cc1949/article/details/79063439)
+
+35. ##### RESRful
+     1. 使用HTTPS  
+     2. API域名和版本号  
+     3. HTTP动词，GET、DELETE、PUT、POST
+     4. 过滤，排序，搜索，分页
+     5. 状态码和文字说明
+     6. 文档  
+
+     [具体讲解](https://blog.csdn.net/u013007900/article/details/79875287)
+
+36. ##### MVVC
+     多版本并发控制  
+
+     [具体讲解](https://www.cnblogs.com/hirampeng/p/9944200.html)
+
+37. ##### Ping用的什么协议
+     ICMP 网络控制消息协议
+
+38. ##### 堆排序
+     堆(heap): 父节点的值大于子节点的值的完全二叉树  
+
+     ![求第i个节点的父子节点](https://s2.ax1x.com/2019/04/27/EKhWo4.jpg)
+
+     ```python
+     
+     def heapify(alist, n, i):
+         if i >= n:
+             return
+         c1 = 2 * i + 1
+         c2 = 2 * i + 2
+         max_index = i
+         if c1 < n and alist[c1] > alist[max_index]:
+             max_index = c1
+         if c2 < n and alist[c2] > alist[max_index]:
+             max_index = c2
+         if max_index != i:
+             alist[i], alist[max_index] = alist[max_index], alist[i]
+             heapify(alist, n, max_index)
+     
+     def build_heap(alist, n):
+         last_node = n - 1
+         last_node_parent = n//2 -1
+         for i in range(last_node_parent, -1, -1):
+             heapify(alist, n, i)
+     
+     def heap_sort(alist, n):
+         build_heap(alist, n)
+         for i in range(n-1, -1, -1):
+             alist[i], alist[0] = alist[0], alist[i]
+             heapify(alist, i, 0)
+     ```
 
