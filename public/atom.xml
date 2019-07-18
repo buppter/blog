@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://buppter.xyz/"/>
-  <updated>2019-07-18T15:31:43.083Z</updated>
+  <updated>2019-07-18T16:03:14.679Z</updated>
   <id>https://buppter.xyz/</id>
   
   <author>
@@ -21,20 +21,20 @@
     <link href="https://buppter.xyz/2019/07/16/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96/"/>
     <id>https://buppter.xyz/2019/07/16/数据库索引优化/</id>
     <published>2019-07-16T15:14:46.000Z</published>
-    <updated>2019-07-18T15:31:43.083Z</updated>
+    <updated>2019-07-18T16:03:14.679Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Jul 18 2019 23:31:57 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;对于数据库的优化主要包括三个部分：查询优化、索引优化和字段类型优化，其中，索引优化则是数据库优化的重中之重。一个查询使用索引与不使用索引的差别可能只在100个数量级，而一个好的索引与不好的索引差别可能在1000个数量级，但是一个最优的索引与普通的索引查询效率可能就相差上万甚至更高的数量级。本文主要重点讲解数据库索引的优化。&lt;/p&gt;
+      &lt;!-- build time:Fri Jul 19 2019 00:07:42 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;对于数据库的优化主要包括三个部分：查询优化、索引优化和字段类型优化，其中，索引优化则是数据库优化的重中之重。一个查询使用索引与不使用索引的差别可能只在100个数量级，而一个好的索引与不好的索引差别可能在1000个数量级，但是一个最优的索引与普通的索引查询效率可能就相差上万甚至更高的数量级。本文主要重点讲解数据库索引的优化。&lt;/p&gt;
     
     </summary>
     
       <category term="数据库" scheme="https://buppter.xyz/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="索引" scheme="https://buppter.xyz/tags/%E7%B4%A2%E5%BC%95/"/>
-    
       <category term="MySQL" scheme="https://buppter.xyz/tags/MySQL/"/>
+    
+      <category term="索引" scheme="https://buppter.xyz/tags/%E7%B4%A2%E5%BC%95/"/>
     
       <category term="数据库" scheme="https://buppter.xyz/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
@@ -49,7 +49,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Jul 18 2019 23:31:57 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近学习Golang，IDE选择了VScode，主要原因是VScode轻巧还有丰富的各种插件。但是在配置好环境之后，vscode提示我安装插件，却一直安装失败，在折腾了好久之后终于算是安装成功了，所以记录一下。&lt;br&gt;
+      &lt;!-- build time:Fri Jul 19 2019 00:07:42 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近学习Golang，IDE选择了VScode，主要原因是VScode轻巧还有丰富的各种插件。但是在配置好环境之后，vscode提示我安装插件，却一直安装失败，在折腾了好久之后终于算是安装成功了，所以记录一下。&lt;br&gt;
     
     </summary>
     
@@ -69,18 +69,18 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Jul 18 2019 23:31:57 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;整理了自己在Python后台开发求职面试过程中的一些面试题，基本涵盖了Python的基础知识，数据库知识，HTTP协议相关，以及基础的数据结构与算法。也方便自己后续面试的时候回来复习。&lt;br&gt;
+      &lt;!-- build time:Fri Jul 19 2019 00:07:42 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;整理了自己在Python后台开发求职面试过程中的一些面试题，基本涵盖了Python的基础知识，数据库知识，HTTP协议相关，以及基础的数据结构与算法。也方便自己后续面试的时候回来复习。&lt;br&gt;
     
     </summary>
     
       <category term="面试" scheme="https://buppter.xyz/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="MySQL" scheme="https://buppter.xyz/tags/MySQL/"/>
-    
       <category term="Python" scheme="https://buppter.xyz/tags/Python/"/>
     
       <category term="HTTP" scheme="https://buppter.xyz/tags/HTTP/"/>
+    
+      <category term="MySQL" scheme="https://buppter.xyz/tags/MySQL/"/>
     
       <category term="面试" scheme="https://buppter.xyz/tags/%E9%9D%A2%E8%AF%95/"/>
     
@@ -95,7 +95,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Thu Jul 18 2019 23:31:57 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;在Flask的开发中，我们势必会遇到两张表之间存在多个外键的情况。例如，现在有两张表，一张表是&lt;code&gt;User&lt;/code&gt;，另一张表是&lt;code&gt;Article&lt;/code&gt;。一篇文章的作者&lt;code&gt;author_id&lt;/code&gt;可以设置外键关联&lt;code&gt;User&lt;/code&gt;表，同时文章的审稿人&lt;code&gt;reviewer_id&lt;/code&gt;也可以设置外键关联&lt;code&gt;User&lt;/code&gt;表。当我们以SQLAchemy多对一(many to one)的设计方法来添加&lt;code&gt;relationship&lt;/code&gt;关系映射时，程序会抛出一个&lt;code&gt;AmbiguousForeignKeysError&lt;/code&gt;错误，这篇文章我们就来解决这个问题。&lt;br&gt;
+      &lt;!-- build time:Fri Jul 19 2019 00:07:42 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;在Flask的开发中，我们势必会遇到两张表之间存在多个外键的情况。例如，现在有两张表，一张表是&lt;code&gt;User&lt;/code&gt;，另一张表是&lt;code&gt;Article&lt;/code&gt;。一篇文章的作者&lt;code&gt;author_id&lt;/code&gt;可以设置外键关联&lt;code&gt;User&lt;/code&gt;表，同时文章的审稿人&lt;code&gt;reviewer_id&lt;/code&gt;也可以设置外键关联&lt;code&gt;User&lt;/code&gt;表。当我们以SQLAchemy多对一(many to one)的设计方法来添加&lt;code&gt;relationship&lt;/code&gt;关系映射时，程序会抛出一个&lt;code&gt;AmbiguousForeignKeysError&lt;/code&gt;错误，这篇文章我们就来解决这个问题。&lt;br&gt;
     
     </summary>
     
