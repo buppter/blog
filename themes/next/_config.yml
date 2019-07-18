@@ -941,7 +941,8 @@ vendors:
 
   # Internal version: 3.3.0
   # https://github.com/ethantw/Han
-  Han: https://cdn.bootcss.com/Han/3.3.0/han.min.css
+  # Han: https://cdn.bootcss.com/Han/3.3.0/han.min.css
+  Han: ./source/css/_common/components/post/Han.css
 
   # Internal version: 3.3.0
   # https://github.com/vinta/pangu.js
