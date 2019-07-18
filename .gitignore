@@ -1,5 +1,4 @@
 .DS_Store
 Thumbs.db
 *.lognode_modules/
-.deploy*/
 package-lock.json
